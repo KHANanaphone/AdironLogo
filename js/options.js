@@ -1,7 +1,7 @@
 $(document).ready(function(){
 
     setupOptions();
-    redraw();
+    validateAndRedraw();
     
     function setupOptions(){
 
@@ -49,7 +49,7 @@ $(document).ready(function(){
                     val = 0;
 
                 $input.val(val + toAdd);
-                redraw();
+                validateAndRedraw();
             };
 
             function inputChanged(event){
@@ -61,7 +61,7 @@ $(document).ready(function(){
 
                 $(this).val(val);        
 
-                redraw();
+                validateAndRedraw();
             };
         };
         
@@ -76,7 +76,7 @@ $(document).ready(function(){
             
             function checked(){
                 
-                redraw();
+                validateAndRedraw();
             };
         };
         
@@ -89,14 +89,14 @@ $(document).ready(function(){
             $new.find('.color-picker').colorpicker()
                 .on('changeColor', function(){
                 
-                redraw();
+                validateAndRedraw();
             });
             
             $('#options-section').append($new);
         };    
     };
     
-    function redraw(){
+    function validateAndRedraw(){
         
         var options = {
             trianglegap: parseInt($('#trianglegap input').val()),
@@ -110,6 +110,15 @@ $(document).ready(function(){
             legcolor2: $('#legcolor2 input').val(),
             shapecolor: $('#shapecolor input').val()           
         };
+        
+        if(options.angle <= 1){            
+            $('#legangle input').val(1)
+            options.angle = 1;
+        }
+        else if(options.angle >= 165){
+            $('#legangle input').val(165)
+            options.angle = 165
+        }
         
         LogoTool.draw(options);
     };
