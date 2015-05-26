@@ -1,0 +1,32 @@
+html, body{
+    height: 100%;
+    width: 100%;
+}
+
+#logo-section svg{    
+    width: 100%;
+    height: 100%;
+}
+
+#options-section{
+    height: 100%;
+    background-color: pink;
+}
+
+#options-section .option{
+    margin-top: 3%;
+}
+
+#options-section .option-name{
+    font-size: 1.2em;
+    font-size: 1.2vw;
+}
+
+#hidden{
+    display: none;
+}
+
+svg path, svg circle, svg polygon{
+    stroke-width: 5;
+    fill: white;
+}

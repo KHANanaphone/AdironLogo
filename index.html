@@ -1,0 +1,69 @@
+<html>
+    <head>
+
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/font-awesome.css">
+        <link rel="stylesheet" href="css/numberSpinner.css">
+        <link rel="stylesheet" href="css/bootstrap-colorpicker.min.css">
+
+        <script src="js/jquery-2.1.4.min.js"></script> 
+        <script src="js/options.js"></script> 
+        <script src="js/logoTool.js"></script>    
+        <script src="js/bootstrap-colorpicker.js"></script>  
+
+        <title>Logo Tool</title>
+    </head>
+
+    <body>
+        <div>
+
+            <div id="logo-section" class="col-xs-9">
+                <svg viewBox='0 0 1500 1500'>
+                
+                    <path class="leg-1"></path>
+                    <path class="leg-2"></path>
+                    <circle class="circle"></circle>
+                    <polygon class="triangle"></polygon>
+                    <polygon class="square"></polygon>
+                    <path class="arc" fill="rgba(0, 0, 0, 0)"></path>
+                    
+                </svg>
+            </div>        
+
+            <div id="options-section" class="col-xs-3">
+            </div>
+
+        </div>
+
+
+        <div id="hidden">
+
+            <div class='option number-option'>
+                <div class='option-name'></div>
+                <div class='input-group spinner'>
+                    <input type='text' class='form-control' value='0'>
+                    <div class="input-group-btn-vertical">
+                      <button class="btn btn-default spin-up" type="button"><i class="fa fa-caret-up"></i></button>
+                      <button class="btn btn-default spin-down" type="button"><i class="fa fa-caret-down"></i></button>
+                    </div>  
+                </div>
+            </div>
+            
+            <div class='option color-option'>
+                <div class='option-name'></div>
+                <div class="input-group color-picker">
+                    <input type="text" value="black" class="form-control" />
+                    <span class="input-group-addon"><i></i></span>
+                </div>
+            </div>
+
+            <div class="option checkbox">
+                <label class="option-name">
+                    <input type="checkbox"> 
+                </label>
+            </div>
+            
+        </div>
+    </body>    
+</html>
